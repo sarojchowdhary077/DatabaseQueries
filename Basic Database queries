@@ -1,0 +1,20 @@
+To create a table
+
+CREATE TABLE  'emp' (
+  'id' INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  'name' VARCHAR(45) NOT NULL,
+  'lastname' VARCHAR(45),
+  'dept' VARCHAR(45) DEFAULT 'sales',
+  PRIMARY KEY ('id')
+)
+ENGINE = InnoDB;
+
+2. Simple insert query
+insert into emp (name,lastname,dept) values('new name','new last name','Accounts');
+
+3. Regular Join
+select emp.name,department.name from emp join department on emp.dept = department.name
+4. Left Join
+select emp.name,department.name from emp left join department on emp.dept = department.name
+5. Right Join
+select emp.name,department.name from emp right join department on emp.dept = department.name
